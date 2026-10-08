@@ -58,7 +58,7 @@
 File name: 'C:\Users\aytha\Documents\Mjukvaruutvecklare med AI inriktningskurs\OneDrive - Edukatus Alliance\2-C# introduktion 2026-08-31—2026-10-23\KK2-Original-program\kk2-startkod-main\items.txt'. ShoppingList.cs:line 91 och Program.cs:line 2
 
 #### Åtgärd
-1. Efter att byta namn på filen till shoppinglist.txt, la jag till en try-catch funktion som ska försöka läsa om det finns en fil med den namn, annars försätter programmet att köras. (ShoppingList.cs, rad 91-105)
+1. Efter att byta namn på filen till shoppinglist.txt, la jag till en try-catch funktion som ska försöka läsa om det finns en fil med dett namn, annars försätter programmet att köras. (ShoppingList.cs, rad 91-105)
 2. Commit hash: a59f0046425b9463babd0f6f063c7310b713ba2a
 
 ### Sök efter varan vid namn fungerar inte
