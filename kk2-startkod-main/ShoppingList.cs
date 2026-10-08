@@ -102,7 +102,7 @@ class ShoppingList
         catch(FileNotFoundException)
         {
             Console.WriteLine("Ups, nånting gick fel.");
-            Console.WriteLine("Filen som innehåller köpping list kunde inte läsas eller inte finns.");
+            Console.WriteLine("Filen kunde inte läsas eller inte finns.");
         }
     }
 }

@@ -59,5 +59,11 @@ File name: 'C:\Users\aytha\Documents\Mjukvaruutvecklare med AI inriktningskurs\O
 
 #### Åtgärd
 1. Efter att byta namn på filen till shoppinglist.txt, la jag till en try-catch funktion som ska försöka läsa om det finns en fil med den namn, annars försätter programmet att köras. (ShoppingList.cs, rad 91-105)
-2. Commit hash: 
+2. Commit hash: a59f0046425b9463babd0f6f063c7310b713ba2a
+
+### Sök efter varan vid namn fungerar inte
+1. Starta program
+2. Välja Sök vara
+3. Skrive ett namn som finns i listan
+4. Feedback: Varan inte finns även om det finns
 

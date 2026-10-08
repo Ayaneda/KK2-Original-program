@@ -1,1 +1,2 @@
-20;Skincka
+20;Smör 20
+15;Mjölk
