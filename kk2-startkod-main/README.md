@@ -7,3 +7,9 @@
 
 #### Åtgärd
 1. Text filen hade en extra tomt space och programet kunde inte ladda det.
+2. Commit hash: 7580fd549b647f561e87cfdd1ad4761605029397
+
+### Första produkt saknas i listan
+1. Starta program
+2. Listan bara visa priset från den andra produkt och läsa normalt vidare efter det.
+3. Notera: varje efter program körning.
