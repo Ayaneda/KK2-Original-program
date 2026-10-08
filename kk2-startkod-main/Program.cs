@@ -14,17 +14,22 @@ while (true)
     Console.Write("Välj: ");
 
     
-    string input = Console.ReadLine();
-    if (int.TryParse(input, out int choice))
+    string inputChoice = Console.ReadLine();
+    if (int.TryParse(inputChoice, out int choice))
 
         if (choice == 1)
         {
             Console.Write("Namn: ");
             string name = Console.ReadLine();
             Console.Write("Pris: ");
+            string inputPrice = Console.ReadLine();
+            if(int.TryParse(inputPrice, out int price))
+            {
+                list.Add(new Item(name, price));
+            }
             
-            int price = int.Parse(Console.ReadLine());
-            list.Add(new Item(name, price));
+            
+            
         }
         else if (choice == 2)
         {

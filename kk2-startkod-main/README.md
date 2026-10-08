@@ -34,3 +34,8 @@
 3. Skriva till en namn
 4. Mata in annat än nummer.
 5. Fel meddelande: Unhandled exception. System.FormatException: The input string 'gdfgsdgf' was not in a correct format. Program.cs:line 26
+
+
+#### Åtgärd
+1. Ändrade input till string och därefter i en if-sats - konvertera till int med variabel price, om det är inte en heltal. Avbrytt varan inlägg och gå tillbaka till menyn.
+2. Commit hash: 
