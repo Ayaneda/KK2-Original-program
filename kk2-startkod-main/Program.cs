@@ -34,8 +34,12 @@ while (true)
         else if (choice == 2)
         {
             Console.Write("Nummer: ");
-            int number = int.Parse(Console.ReadLine());
-            list.RemoveAt(number);
+            string inputTaBort = Console.ReadLine();
+            if(int.TryParse(inputTaBort, out int number))
+            {
+                list.RemoveAt(number);
+            }
+
         }
         else if (choice == 3)
         {
