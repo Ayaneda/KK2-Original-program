@@ -65,8 +65,8 @@ File name: 'C:\Users\aytha\Documents\Mjukvaruutvecklare med AI inriktningskurs\O
 1. Starta program
 2. Välja Sök vara
 3. Skrive ett namn som finns i listan
-4. Feedback: Varan inte finns även om det finns
+4. Feedback: Varan inte finns (även om det finns)
 
 #### Åtgärd
 1. La till koder som fixa känslighet inmatning (Stora/små bokstäver, spaces) så att input och lista av items stämmer. (ShoppingList.cs, rad 48)
-2. Commit hash:
+2. Commit hash: c30f94830e4f0313981f4ef2870c9752d440aca6

@@ -45,7 +45,7 @@ class ShoppingList
     {
         foreach (Item item in items)
         {
-            if (item.Name.Trim().ToLower() == name.Trim().ToLower())
+            if (item.Name.ToLower() == name.ToLower())
             {
                 return item;
             }
@@ -77,12 +77,17 @@ class ShoppingList
         try
         {
             File.WriteAllText(path, string.Join("\r\n", lines) + "\r\n");
+            Console.WriteLine("Listan är sparad.");
         }
-        catch
+        catch(FormatException)
         {
+            Console.WriteLine("Det gick något fel med formatering");
         }
-
-        Console.WriteLine("Listan är sparad.");
+        catch(Exception ex)
+        {
+            Console.WriteLine($"Ett fel har hänt: {ex.Message}");
+        }
+        
     }
 
     // Reads the file back into the list.
@@ -103,6 +108,10 @@ class ShoppingList
         {
             Console.WriteLine("Ups, nånting gick fel.");
             Console.WriteLine("Filen kunde inte läsas eller inte finns.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Ett fel har hänt: {ex.Message}");
         }
     }
 }

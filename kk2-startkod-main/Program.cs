@@ -20,9 +20,9 @@ while (true)
         if (choice == 1)
         {
             Console.Write("Namn: ");
-            string name = Console.ReadLine();
+            string name = Console.ReadLine().Trim();
             Console.Write("Pris: ");
-            string inputPrice = Console.ReadLine();
+            string inputPrice = Console.ReadLine().Trim();
             if(int.TryParse(inputPrice, out int price))
             {
                 list.Add(new Item(name, price));
@@ -34,7 +34,7 @@ while (true)
         else if (choice == 2)
         {
             Console.Write("Nummer: ");
-            string inputTaBort = Console.ReadLine();
+            string inputTaBort = Console.ReadLine().Trim();
             if(int.TryParse(inputTaBort, out int number))
             {
                 list.RemoveAt(number);
@@ -48,7 +48,7 @@ while (true)
         else if (choice == 4)
         {
             Console.Write("Namn att söka efter: ");
-            string wanted = Console.ReadLine();
+            string wanted = Console.ReadLine().Trim();
             Item found = list.Find(wanted);
 
             if (found == null)
