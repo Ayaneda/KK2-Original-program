@@ -25,7 +25,7 @@ class ShoppingList
     {
         int sum = 0;
 
-        for (int i = 1; i < items.Count; i++)
+        for (int i = 0; i < items.Count; i++)
         {
             sum += items[i].Price;
         }
@@ -81,8 +81,8 @@ class ShoppingList
     // Reads the file back into the list.
     public void Load()
     {
-        string text = File.ReadAllText(path);
-        string[] lines = text.Split('\n');
+        string[] lines = File.ReadAllLines(path);
+        
 
         foreach (string line in lines)
         {

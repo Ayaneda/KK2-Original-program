@@ -13,3 +13,8 @@
 1. Starta program
 2. Listan bara visa priset från den andra produkt och läsa normalt vidare efter det.
 3. Notera: varje efter program körning.
+
+#### Åtgärd 
+1. Första felet: I Load methoden vid inläsning. Byt till med avancerad inläsning där känner till \r\n och gör att det går att läsa hela filen.
+2. Andra felet: I Print methoden, forloopen började med i=1 istället än i=0. Ändrade och första produkten földe med.
+3. Commit hash: 
