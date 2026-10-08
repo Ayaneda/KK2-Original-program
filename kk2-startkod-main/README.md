@@ -50,4 +50,10 @@
 #### Åtgärd
 1. Första felet: Ändrade input till string och därefter i en if-sats - konvertera till int med variabel number, om det är inte en heltal. Avbrytt varan inlägg och gå tillbaka till menyn. (Program.cs, rad 37-41)
 2. Andra felet: La till en if-sats som kontrollera att nummer finns inom index annars en feedback meddelande. (ShoppingList.cs, rad 20-27)
-3. Commit hash: 
+3. Commit hash: fdf9050a1b8caaf79a4af007e95cbd6d07d65103
+
+### Program krashar efter att item.txt filens namn är ändrat
+1. Byt namn på .txt filen och kör program
+2. Fel meddelande: Could not find file 'C:\Users\aytha\Documents\Mjukvaruutvecklare med AI inriktningskurs\OneDrive - Edukatus Alliance\2-C# introduktion 2026-08-31—2026-10-23\KK2-Original-program\kk2-startkod-main\items.txt'.
+File name: 'C:\Users\aytha\Documents\Mjukvaruutvecklare med AI inriktningskurs\OneDrive - Edukatus Alliance\2-C# introduktion 2026-08-31—2026-10-23\KK2-Original-program\kk2-startkod-main\items.txt'. ShoppingList.cs:line 91 och Program.cs:line 2
+
