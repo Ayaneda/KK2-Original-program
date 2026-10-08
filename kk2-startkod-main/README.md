@@ -21,9 +21,16 @@
 
 ### Program krashar i meny val
 1. Starta program
-2. Fel meddelande: The input string 'sdfsdf' was not in a correct format.
+2. Fel meddelande: The input string 'sdfsdf' was not in a correct format.Program.cs:line 17
 3. Notera: Det händer efter felinmatning forutom 1,2,3,4 och 5.
 
 #### Åtgärd
 1. Ändrade input till string och därefter i en if-sats - konvertera till int med variabel choice, if choice innehåller finns i meny, körs funktionen annars bara håller sig i while-loop. (rad 17 och 18)
-2. Commit hash: 
+2. Commit hash: 5776e74244f17fc144043e5c562fb85c3be1f039
+
+### Program krasha i pris
+1. Starta program
+2. Välja lägga till produkt.
+3. Skriva till en namn
+4. Mata in annat än nummer.
+5. Fel meddelande: Unhandled exception. System.FormatException: The input string 'gdfgsdgf' was not in a correct format. Program.cs:line 26
