@@ -67,3 +67,6 @@ File name: 'C:\Users\aytha\Documents\Mjukvaruutvecklare med AI inriktningskurs\O
 3. Skrive ett namn som finns i listan
 4. Feedback: Varan inte finns även om det finns
 
+#### Åtgärd
+1. La till koder som fixa känslighet inmatning (Stora/små bokstäver, spaces) så att input och lista av items stämmer. (ShoppingList.cs, rad 48)
+2. Commit hash:

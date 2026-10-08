@@ -45,7 +45,7 @@ class ShoppingList
     {
         foreach (Item item in items)
         {
-            if (item.Name == name)
+            if (item.Name.Trim().ToLower() == name.Trim().ToLower())
             {
                 return item;
             }
