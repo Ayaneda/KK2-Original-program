@@ -38,4 +38,11 @@
 
 #### Åtgärd
 1. Ändrade input till string och därefter i en if-sats - konvertera till int med variabel price, om det är inte en heltal. Avbrytt varan inlägg och gå tillbaka till menyn.
-2. Commit hash: 
+2. Commit hash: a75cd259e51e85d0117faf9012957b9ed6d1c502
+
+### Program krashar vid fel inmatning
+1. Starta program
+2. Välja ta bort produkt.
+3. välja nummer till vara som inte finss och fel inmatning av icke heltal.
+4. Fel meddelande: The input string 'gwegwesg' was not in a correct format. Program.cs:line 37
+   Fel meddelande: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index'). ShoppingList.cs:line 20 och Program.cs:line 38.
