@@ -13,43 +13,45 @@ while (true)
     Console.WriteLine("5. Avsluta");
     Console.Write("Välj: ");
 
-    int choice = int.Parse(Console.ReadLine());
+    
+    string input = Console.ReadLine();
+    if (int.TryParse(input, out int choice))
 
-    if (choice == 1)
-    {
-        Console.Write("Namn: ");
-        string name = Console.ReadLine();
-        Console.Write("Pris: ");
-        int price = int.Parse(Console.ReadLine());
-        list.Add(new Item(name, price));
-    }
-    else if (choice == 2)
-    {
-        Console.Write("Nummer: ");
-        int number = int.Parse(Console.ReadLine());
-        list.RemoveAt(number);
-    }
-    else if (choice == 3)
-    {
-        list.Save();
-    }
-    else if (choice == 4)
-    {
-        Console.Write("Namn att söka efter: ");
-        string wanted = Console.ReadLine();
-        Item found = list.Find(wanted);
+        if (choice == 1)
+        {
+            Console.Write("Namn: ");
+            string name = Console.ReadLine();
+            Console.Write("Pris: ");
+            int price = int.Parse(Console.ReadLine());
+            list.Add(new Item(name, price));
+        }
+        else if (choice == 2)
+        {
+            Console.Write("Nummer: ");
+            int number = int.Parse(Console.ReadLine());
+            list.RemoveAt(number);
+        }
+        else if (choice == 3)
+        {
+            list.Save();
+        }
+        else if (choice == 4)
+        {
+            Console.Write("Namn att söka efter: ");
+            string wanted = Console.ReadLine();
+            Item found = list.Find(wanted);
 
-        if (found == null)
-        {
-            Console.WriteLine("Varan finns inte i listan.");
+            if (found == null)
+            {
+                Console.WriteLine("Varan finns inte i listan.");
+            }
+            else
+            {
+                Console.WriteLine($"Hittade: {found}");
+            }
         }
-        else
+        else if (choice == 5)
         {
-            Console.WriteLine($"Hittade: {found}");
+            break;
         }
-    }
-    else if (choice == 5)
-    {
-        break;
-    }
 }
