@@ -17,4 +17,9 @@
 #### Åtgärd 
 1. Första felet: I Load methoden vid inläsning. Byt till med avancerad inläsning där känner till \r\n och gör att det går att läsa hela filen.
 2. Andra felet: I Print methoden, forloopen började med i=1 istället än i=0. Ändrade och första produkten földe med.
-3. Commit hash: 
+3. Commit hash: 03f2cb88259574590945ca351ad21547ffbd8906
+
+### Program krashar i meny val
+1. Starta program
+2. Fel meddelande: The input string 'sdfsdf' was not in a correct format.
+3. Notera: Det händer efter felinmatning forutom 1,2,3,4 och 5.
