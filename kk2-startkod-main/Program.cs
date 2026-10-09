@@ -1,4 +1,4 @@
-ShoppingList list = new ShoppingList("items.txt");
+ShoppingList list = new ShoppingList("items.txt");  
 list.Load();
 
 while (true)
@@ -14,16 +14,16 @@ while (true)
     Console.Write("Välj: ");
 
     
-    string inputChoice = Console.ReadLine();
-    if (int.TryParse(inputChoice, out int choice))
-
+    string inputChoice = Console.ReadLine().Trim();     //This code take a string
+    if (int.TryParse(inputChoice, out int choice))      //This code convert string into a number, if the code is false
+                                                        //the program stay in the while-loop
         if (choice == 1)
         {
             Console.Write("Namn: ");
-            string name = Console.ReadLine().Trim();
-            Console.Write("Pris: ");
+            string name = Console.ReadLine().Trim();     //This code helps to give the user more flexibility because it can take away 
+            Console.Write("Pris: ");                     //spaces, so just the string keeps. Sadly null is still allow in this version
             string inputPrice = Console.ReadLine().Trim();
-            if(int.TryParse(inputPrice, out int price))
+            if(int.TryParse(inputPrice, out int price))  //Convert into a number and if its not a number the product is not added
             {
                 list.Add(new Item(name, price));
             }
@@ -34,8 +34,8 @@ while (true)
         else if (choice == 2)
         {
             Console.Write("Nummer: ");
-            string inputTaBort = Console.ReadLine().Trim();
-            if(int.TryParse(inputTaBort, out int number))
+            string inputTaBort = Console.ReadLine().Trim(); 
+            if(int.TryParse(inputTaBort, out int number))   //Convert into a number and if its not a number, go back to the while-loop
             {
                 list.RemoveAt(number);
             }
@@ -48,7 +48,7 @@ while (true)
         else if (choice == 4)
         {
             Console.Write("Namn att söka efter: ");
-            string wanted = Console.ReadLine().Trim();
+            string wanted = Console.ReadLine().Trim();    //keeping input neutral and protect from spaces for comparation in the method
             Item found = list.Find(wanted);
 
             if (found == null)

@@ -17,7 +17,7 @@ class ShoppingList
     // Removes the item the user sees as number 1, 2, 3 ...
     public void RemoveAt(int number)
     {
-        if (number >= 1 && number <= items.Count)
+        if (number >= 1 && number <= items.Count)   //It controls to remove only when there is a product with the given number
         {
             items.RemoveAt(number - 1);
         }
@@ -32,7 +32,7 @@ class ShoppingList
     {
         int sum = 0;
 
-        for (int i = 0; i < items.Count; i++)
+        for (int i = 0; i < items.Count; i++)     //Index start always with 0, because it was 1 before always skip first product.
         {
             sum += items[i].Price;
         }
@@ -45,7 +45,7 @@ class ShoppingList
     {
         foreach (Item item in items)
         {
-            if (item.Name.ToLower() == name.ToLower())
+            if (item.Name.ToLower() == name.ToLower()) //Keep the input neutral in the comparation.
             {
                 return item;
             }
@@ -74,16 +74,17 @@ class ShoppingList
             lines.Add($"{item.Price};{item.Name}");
         }
 
-        try
+        try                                              //This keep the program running even if it can not save into a file
         {
-            File.WriteAllText(path, string.Join("\r\n", lines) + "\r\n");
+            File.WriteAllText(path, string.Join("\r\n", lines) + "\r\n");   //Powerful code, overwrite if there is a file, else 
+                                                                            //create a file with the name given from the path variable
             Console.WriteLine("Listan är sparad.");
         }
-        catch(FormatException)
+        catch(FormatException)                          //If the format is not accepted, give feedback
         {
             Console.WriteLine("Det gick något fel med formatering");
         }
-        catch(Exception ex)
+        catch(Exception ex)                             //If nothing works, give an error message
         {
             Console.WriteLine($"Ett fel har hänt: {ex.Message}");
         }
@@ -93,9 +94,10 @@ class ShoppingList
     // Reads the file back into the list.
     public void Load()
     {
-        try
+        try                                                //Using try-catch I make sure that the program keep going even when the 
+                                                           //the program can not read or find the file
         {
-            string[] lines = File.ReadAllLines(path);
+            string[] lines = File.ReadAllLines(path);     //this code read all lines and accept /n and /r formats too.
             
 
             foreach (string line in lines)
@@ -104,12 +106,12 @@ class ShoppingList
                 items.Add(new Item(parts[1], int.Parse(parts[0])));
             }
         }
-        catch(FileNotFoundException)
+        catch(FileNotFoundException)                        //If the file is not found or exist - feedback to the user
         {
             Console.WriteLine("Ups, nånting gick fel.");
             Console.WriteLine("Filen kunde inte läsas eller inte finns.");
         }
-        catch (Exception ex)
+        catch (Exception ex)                                //Send a feedback with an error message
         {
             Console.WriteLine($"Ett fel har hänt: {ex.Message}");
         }
