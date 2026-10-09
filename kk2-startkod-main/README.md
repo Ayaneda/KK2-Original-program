@@ -1,4 +1,6 @@
-# Felrapport
+# Del 1: Laga programmet
+
+## Felrapport
 
 ### Program krasha direkt efter run
 1. Starta program.
@@ -70,3 +72,6 @@ File name: 'C:\Users\aytha\Documents\Mjukvaruutvecklare med AI inriktningskurs\O
 #### Åtgärd
 1. La till koder som fixa känslighet inmatning (Stora/små bokstäver, spaces) så att input och lista av items stämmer. (ShoppingList.cs, rad 48)
 2. Commit hash: c30f94830e4f0313981f4ef2870c9752d440aca6
+
+
+# Del 2: Bygga om programmet
