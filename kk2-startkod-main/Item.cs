@@ -1,4 +1,6 @@
 // One item on the shopping list.
+using System.Diagnostics.CodeAnalysis;
+
 class Item
 {
     public string Name { get; set; }
@@ -6,7 +8,17 @@ class Item
 
     public Item(string name, int price)
     {
+        
+        if (string.IsNullOrWhiteSpace(name))
+        {
+            throw new ArgumentException("Produktens namn måste skrivas, kan inte vara tömt.");
+        }
         Name = name;
+        
+        if (price <= 0)
+        {
+            throw new ArgumentOutOfRangeException("Produktens pris kan inte vara negativ eller noll. Allt kosta i detta livet.");
+        }
         Price = price;
     }
 

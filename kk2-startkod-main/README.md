@@ -77,4 +77,8 @@ File name: 'C:\Users\aytha\Documents\Mjukvaruutvecklare med AI inriktningskurs\O
 # Del 2: Bygga om programmet
 
 ### Lägga till feedback
-Jag la till en extra if-sats som hanterar alla data som inte är ett nummer så att användare förstår vad är som är fel, datan i sig själv var säkrad men man fick ingen feedback innan. (Line 18 - 21 & line 71-74)
+Jag la till en extra if-sats som hanterar alla data som inte är ett nummer så att användare förstår vad är som är fel, datan i sig själv var säkrad men man fick ingen feedback innan. (Program.cs, Line 18 - 21 & line 71-74)
+
+### Skydda konstruktor från felinmatning
+Jag la till en if-sats för att kontrollera att namn är angivet och inte null eller spaces, även om spaces är redan fixat med `Trim()`. Också har skyddat price från negativ nummer. Båda två ska kastas en argument om nånting inte respekteras. (item.cs, rad 12-21) 
+Efter körning, programmet krashade så jag fick sätta Try-catch som fångar argumenten från item.cs. (Program.cs, rad 26-52).

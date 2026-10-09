@@ -23,17 +23,33 @@ while (true)
                                                         //the program stay in the while-loop
         if (choice == 1)
         {
-            Console.Write("Namn: ");
-            string name = Console.ReadLine().Trim();     //This code helps to give the user more flexibility because it can take away 
-            Console.Write("Pris: ");                     //spaces, so just the string keeps. Sadly null is still allow in this version
-            string inputPrice = Console.ReadLine().Trim();
-            if(int.TryParse(inputPrice, out int price))  //Convert into a number and if its not a number the product is not added
+            try
             {
-                list.Add(new Item(name, price));
+                Console.Write("Namn: ");
+                string name = Console.ReadLine().Trim();     //This code helps to give the user more flexibility because it can take away 
+                Console.Write("Pris: ");                     //spaces, so just the string keeps. Sadly null is still allow in this version
+                string inputPrice = Console.ReadLine().Trim();
+                if(int.TryParse(inputPrice, out int price))  //Convert into a number and if its not a number the product is not added
+                {
+                    list.Add(new Item(name, price));
+                }
+                else
+                {
+                    Console.WriteLine("Priset måste vara ett nummer");
+                }
             }
-            
-            
-            
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine($"Fel: {ex.Message}");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Någonting gick fel vid inmatning av produkten och priset");
+            }
+            finally
+            {
+                Console.WriteLine("Produkten blev inte tillagg i listan.");
+            }
         }
         else if (choice == 2)
         {
