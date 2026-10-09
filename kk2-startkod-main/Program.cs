@@ -38,11 +38,11 @@ while (true)
                     Console.WriteLine("Priset måste vara ett nummer");
                 }
             }
-            catch (ArgumentException ex)
+            catch (ArgumentException ex)                //Fångar ArgumentExeptions och skriver till användare
             {
                 Console.WriteLine($"Fel: {ex.Message}");
             }
-            catch (Exception)
+            catch (Exception)                           //Om felet läser inte från första catch så visas denna istället
             {
                 Console.WriteLine("Någonting gick fel vid inmatning av produkten och priset. Produkten ska inte läggas till.");
             }
