@@ -75,3 +75,6 @@ File name: 'C:\Users\aytha\Documents\Mjukvaruutvecklare med AI inriktningskurs\O
 
 
 # Del 2: Bygga om programmet
+
+### Lägga till feedback
+Jag la till en extra if-sats som hanterar alla data som inte är ett nummer så att användare förstår vad är som är fel, datan i sig själv var säkrad men man fick ingen feedback innan. (Line 18 - 21 & line 71-74)
