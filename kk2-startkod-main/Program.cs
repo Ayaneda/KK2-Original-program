@@ -15,6 +15,10 @@ while (true)
 
     
     string inputChoice = Console.ReadLine().Trim();     //This code take a string
+    if (!int.TryParse(inputChoice,out int text))        //Giving a feedback just so it will know why its wrong
+    {
+        Console.WriteLine("Välja ett nummer från menyn.");
+    }
     if (int.TryParse(inputChoice, out int choice))      //This code convert string into a number, if the code is false
                                                         //the program stay in the while-loop
         if (choice == 1)
@@ -63,5 +67,9 @@ while (true)
         else if (choice == 5)
         {
             break;
+        }
+        else
+        {
+            Console.WriteLine("Välja ett nummer från menyn.");
         }
 }
