@@ -87,3 +87,6 @@ Efter körning, programmet krashade så jag fick sätta Try-catch som fångar ar
 Jag la till ett budgettak variabel med bestämd pris (1000 kr)i Shoppinglist klass.(Shoppinglist.cs, Line 6). Otydligt om jag skulle tillåta användare lägga till eller det var bestämd. Jag la i Print() methoden att skriva ut budget och hur mycket från budget kan användas.(ShoppingList.cs, Line 68, 70-71). I Add() methoden, la jag en if-sats som kontrollerar först om summan av den nya produkten och summan av produkter som finns redan är över budgeten. Om budgeten överskrider får användare feedback genom en `throw` om overskridelse och att produkten inte blir tillagda. (ShoppingList.cs, Line 15-18).
 #### Motivera designval
 När jag har redan skyddad från innan med en try-catch så blev enkelt att använda samma catch som fångar throw from Add() methoden. På så sätt har jag hanterad överskridelse av budgeten med fåtal rader (4 totalt). I throw beskriver jag till användare vad var problemmet. Samt genom att skriva på Print() methoden hur mycket från budgeten kan användas, blir det lättare för använda att ha koll på det. Om priset finns innaför budgeten, blir produkten tillagg.  
+
+### Lägga till diagram
+![Mitt flödesschema och klassdiagram](diagram.png)
