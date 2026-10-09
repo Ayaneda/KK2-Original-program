@@ -3,6 +3,7 @@ class ShoppingList
 {
     private List<Item> items = new List<Item>();
     private string path;
+    private int _budgettak = 1000;
 
     public ShoppingList(string path)
     {
@@ -11,6 +12,10 @@ class ShoppingList
 
     public void Add(Item item)
     {
+        if(item.Price + Total() > _budgettak)
+        {
+            throw new ArgumentException("Produkten överskrider budgettaket. Produkten ska inte läggas till.");
+        }
         items.Add(item);
     }
 
@@ -60,8 +65,10 @@ class ShoppingList
         {
             Console.WriteLine($"{i + 1}. {items[i]}");
         }
-
+        int kvarAttKöppa = _budgettak - Total();
         Console.WriteLine($"Totalt: {Total()} kr");
+        Console.WriteLine($"Budgettak: {_budgettak} kr");
+        Console.WriteLine($"Kvar att handla för: {kvarAttKöppa} kr");
     }
 
     // Writes one item per line, as "price;name".

@@ -80,5 +80,10 @@ File name: 'C:\Users\aytha\Documents\Mjukvaruutvecklare med AI inriktningskurs\O
 Jag la till en extra if-sats som hanterar alla data som inte är ett nummer så att användare förstår vad är som är fel, datan i sig själv var säkrad men man fick ingen feedback innan. (Program.cs, Line 18 - 21 & line 71-74)
 
 ### Skydda konstruktor från felinmatning
-Jag la till en if-sats för att kontrollera att namn är angivet och inte null eller spaces, även om spaces är redan fixat med `Trim()`. Också har skyddat price från negativ nummer. Båda två ska kastas en argument om nånting inte respekteras. (item.cs, rad 12-21) 
-Efter körning, programmet krashade så jag fick sätta Try-catch som fångar argumenten från item.cs. (Program.cs, rad 26-52).
+Jag la till en if-sats för att kontrollera att namn är angivet och inte null eller spaces, även om spaces är redan fixat med `Trim()`. Som funderting tillägg, har jag funderar om namn ska bara innehåller bokstäver eller kan också innehålla nummer(t.ex. Blöjor n.5). Också har skyddat price från negativ nummer. Båda två ska kastas en argument om nånting inte respekteras. (item.cs, rad 12-21) 
+Efter körning, programmet krashade så jag fick sätta Try-catch som fångar argumenten från item.cs. (Program.cs, rad 26-48).
+
+### Lägga till en budgettak
+Jag la till ett budgettak variabel med bestämd pris (1000 kr)i Shoppinglist klass.(Shoppinglist.cs, Line 6). Otydligt om jag skulle tillåta användare lägga till eller det var bestämd. Jag la i Print() methoden att skriva ut budget och hur mycket från budget kan användas.(ShoppingList.cs, Line 68, 70-71). I Add() methoden, la jag en if-sats som kontrollerar först om summan av den nya produkten och summan av produkter som finns redan är över budgeten. Om budgeten överskrider får användare feedback genom en `throw` om overskridelse och att produkten inte blir tillagda. (ShoppingList.cs, Line 15-18).
+#### Motivera designval
+När jag har redan skyddad från innan med en try-catch så blev enkelt att använda samma catch som fångar throw from Add() methoden. På så sätt har jag hanterad överskridelse av budgeten med fåtal rader (4 totalt). I throw beskriver jag till användare vad var problemmet. Samt genom att skriva på Print() methoden hur mycket från budgeten kan användas, blir det lättare för använda att ha koll på det. Om priset finns innaför budgeten, blir produkten tillagg.  

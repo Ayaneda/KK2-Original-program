@@ -11,13 +11,13 @@ class Item
         
         if (string.IsNullOrWhiteSpace(name))
         {
-            throw new ArgumentException("Produktens namn måste skrivas, kan inte vara tömt.");
+            throw new ArgumentException("Produktens namn måste skrivas, kan inte vara tömt. Produkten ska inte läggas till.");
         }
         Name = name;
         
         if (price <= 0)
         {
-            throw new ArgumentOutOfRangeException("Produktens pris kan inte vara negativ eller noll. Allt kosta i detta livet.");
+            throw new ArgumentOutOfRangeException("Produktens pris kan inte vara negativ eller noll. Allt kosta i detta livet. Produkten ska inte läggas till.");
         }
         Price = price;
     }

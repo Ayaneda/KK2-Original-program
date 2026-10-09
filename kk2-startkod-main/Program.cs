@@ -44,11 +44,7 @@ while (true)
             }
             catch (Exception)
             {
-                Console.WriteLine("Någonting gick fel vid inmatning av produkten och priset");
-            }
-            finally
-            {
-                Console.WriteLine("Produkten blev inte tillagg i listan.");
+                Console.WriteLine("Någonting gick fel vid inmatning av produkten och priset. Produkten ska inte läggas till.");
             }
         }
         else if (choice == 2)
