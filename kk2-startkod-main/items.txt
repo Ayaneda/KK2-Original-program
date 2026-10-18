@@ -1,3 +1,4 @@
 20;Smör
 15;Mjölk
 21;skinka
+60;Blöjor n.5
